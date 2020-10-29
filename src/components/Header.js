@@ -1,13 +1,10 @@
-import React from "react";
-import { Navbar, Nav } from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap";
+import logo from '../img/world_beats_logo.png';
 
-import logo from '../img/world_beats_logo.png'
-
- 
 export const Header = (props) => {
     return (
         <Navbar bg="primary" variant="dark">
-            <Navbar.Brand href="/">
+            <Navbar.Brand href='/'>
                 <img 
                     src={logo}
                     width="180"
