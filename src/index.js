@@ -1,27 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// import {Router, Router, browserHistory, IndexRoute} from "react-router";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import './styles/index.css';
-import App from './components/App';
+import {Root} from './components/Root';
+import {Index} from './components/Index';
+import {FeuillePerso} from './components/Feuille_de_perso';
 
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <Router history={browserHistory}>
-//         <Route path={"/"} component={Root}>
-//           <IndexRoute component={Home} />
-//           <Route path={"user"} component={User} />
-//           <Route path={"home"} component={Home} />
-//         </Route>
-//       </Router>
-//     );
-//   }
-// }
-
-
-
+function App() {
+  return (
+    <Router>
+      <div className='App'>
+        <Root />
+        <Switch>
+          <Route path="/" exact component={Index} />
+          <Route path="/feuille_de_perso" component={FeuillePerso} />
+        </Switch>
+      </div>
+    </Router> 
+  )
+}
 
 ReactDOM.render(
     <App />,
